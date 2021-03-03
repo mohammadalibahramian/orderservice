@@ -1,0 +1,38 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    h2:
+      console:
+        enabled: true
+        path: /h2
+    datasource:
+      url: jdbc:h2:file:~/testorderdb;DB_CLOSE_ON_EXIT=TRUE;FILE_LOCK=NO
+      username: sa
+      password: test
+      driverClassName: org.h2.Driver
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  port : 7575
+
+azure:
+  activedirectory:
+    client-id: e1c25825-21cf-47fb-aa36-b4cbc71f4d8a
+    client-secret: 349e9800-9e76-427d-9d90-29d835f650ee
+    session-stateless: true
+    user-group:
+      allowed-groups: group1

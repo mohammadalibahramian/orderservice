@@ -14,7 +14,7 @@ An application to manage orders
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/mohammadalibahramian/sampleRestAPISpringbootAngularJsSwagger.git
+git clone https://github.com/mohammadalibahramian/orderservice.git
 ```
 **2. The application consists of three component**
 

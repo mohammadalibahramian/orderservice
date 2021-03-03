@@ -6,7 +6,7 @@ An application to manage orders
 
 1. Java - 1.8.x
 
-2. Gradle - g.x.x
+2. Gradle - 4.x.x
 
 
 ## Steps to Setup
